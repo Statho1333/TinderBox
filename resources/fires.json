@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "Κλασική φωτιά με ξύλα πεύκου",
+    "likes": 0,
+    "description": "Εύκολη φωτιά με ξερά κλαδιά και προσανάμματα.",
+    "image": "images/fire_01.png",
+    "imagePrompt": "A realistic campfire made with dry pine logs in a forest campsite at dusk, warm orange flames, cinematic lighting, photorealistic"
+  },
+  {
+    "id": 2,
+    "title": "Φωτιά με πυρόλιθο",
+    "likes": 0,
+    "description": "Παραδοσιακό άναμμα φωτιάς με σπίθες.",
+    "image": "images/fire_02.png",
+    "imagePrompt": "A camper using flint and steel to start a fire, sparks flying, wilderness background, photorealistic"
+  },
+  {
+    "id": 3,
+    "title": "DIY Firestarter με βαμβάκι και βαζελίνη",
+    "likes": 0,
+    "description": "Ανάβει εύκολα ακόμα και σε υγρασία.",
+    "image": "images/fire_03.png",
+    "imagePrompt": "Close-up of cotton and petroleum jelly firestarter igniting, camping setup, photorealistic"
+  },
+  {
+    "id": 4,
+    "title": "Στήσιμο teepee φωτιάς",
+    "likes": 0,
+    "description": "Κλασική δομή για γρήγορο άναμμα.",
+    "image": "images/fire_04.png",
+    "imagePrompt": "Teepee style campfire structure with small sticks forming a cone, burning in forest, photorealistic"
+  },
+  {
+    "id": 5,
+    "title": "Log Cabin φωτιά",
+    "likes": 0,
+    "description": "Σταθερή φωτιά που καίει για ώρα.",
+    "image": "images/fire_05.png",
+    "imagePrompt": "Log cabin fire structure made of stacked wood burning evenly, camping scene, photorealistic"
+  },
+  {
+    "id": 6,
+    "title": "Φωτιά για μαγείρεμα",
+    "likes": 0,
+    "description": "Ιδανική για ψήσιμο και κατσαρόλα.",
+    "image": "images/fire_06.png",
+    "imagePrompt": "Campfire with grill and pot cooking food, glowing embers, outdoor camping, photorealistic"
+  },
+  {
+    "id": 7,
+    "title": "Rocket Stove DIY",
+    "likes": 0,
+    "description": "Αποδοτική φωτιά με αυτοσχέδιο stove.",
+    "image": "images/fire_07.png",
+    "imagePrompt": "DIY rocket stove made from cans, strong flame, camping environment, photorealistic"
+  },
+  {
+    "id": 8,
+    "title": "Φωτιά με μαγνήσιο",
+    "likes": 0,
+    "description": "Γρήγορο άναμμα με sparks.",
+    "image": "images/fire_08.png",
+    "imagePrompt": "Magnesium fire starter creating sparks onto tinder, close-up, photorealistic"
+  },
+  {
+    "id": 9,
+    "title": "Dakota Fire Hole",
+    "likes": 0,
+    "description": "Υπόγεια φωτιά με χαμηλό καπνό.",
+    "image": "images/fire_09.png",
+    "imagePrompt": "Dakota fire hole underground fire setup, minimal smoke, survival camping, photorealistic"
+  },
+  {
+    "id": 10,
+    "title": "Φωτιά σε βροχή",
+    "likes": 0,
+    "description": "Τεχνικές για υγρές συνθήκες.",
+    "image": "images/fire_10.png",
+    "imagePrompt": "Campfire being started in rainy weather, wet wood, survival situation, photorealistic"
+  },
+  {
+    "id": 11,
+    "title": "Solar fire",
+    "likes": 0,
+    "description": "Άναμμα με φακό και ήλιο.",
+    "image": "images/fire_11.png",
+    "imagePrompt": "Using a sing amagnifying glass to start a fire with sunlight, dry grass igniting, photorealistic"
+  },
+  {
+    "id": 12,
+    "title": "Firestarter με πορτοκάλι",
+    "likes": 0,
+    "description": "Φυσικό προσάναμμα.",
+    "image": "images/fire_12.png",
+    "imagePrompt": "Orange peel being used as firestarter, small flame igniting, natural camping scene, photorealistic"
+  },
+  {
+    "id": 13,
+    "title": "Swedish Torch",
+    "likes": 0,
+    "description": "Κορμός που καίγεται κάθετα.",
+    "image": "images/fire_13.png",
+    "imagePrompt": "Swedish torch log burning vertically, night camping scene, warm glow, photorealistic"
+  },
+  {
+    "id": 14,
+    "title": "Φωτιά με μπαταρία",
+    "likes": 0,
+    "description": "Emergency τεχνική.",
+    "image": "images/fire_14.png",
+    "imagePrompt": "Using a battery and wire to start a fire, sparks igniting tinder, survival scene, photorealistic"
+  },
+  {
+    "id": 15,
+    "title": "Bow Drill φωτιά",
+    "likes": 0,
+    "description": "Παραδοσιακή survival μέθοδος.",
+    "image": "images/fire_15.png",
+    "imagePrompt": "Bow drill fire starting technique in action, wooden tools, survival environment, photorealistic"
+  },
+  {
+    "id": 16,
+    "title": "Marshmallow φωτιά",
+    "likes": 0,
+    "description": "Cozy βραδιά στο camping.",
+    "image": "images/fire_16.png",
+    "imagePrompt": "Campfire with marshmallows roasting on sticks, cozy night, warm lighting, photorealistic"
+  },
+  {
+    "id": 17,
+    "title": "Minimal φωτιά με πέτρες",
+    "likes": 0,
+    "description": "Απλή και πρακτική.",
+    "image": "images/fire_17.png",
+    "imagePrompt": "Small campfire surrounded by three stones, minimal setup, outdoor scene, photorealistic"
+  },
+  {
+    "id": 18,
+    "title": "Firestarter με κερί",
+    "likes": 0,
+    "description": "DIY λύση για άναμμα.",
+    "image": "images/fire_18.png",
+    "imagePrompt": "Wax and paper firestarter burning, close-up, camping environment, photorealistic"
+  },
+  {
+    "id": 19,
+    "title": "Γρήγορη φωτιά 5 λεπτών",
+    "likes": 0,
+    "description": "Για όταν βιάζεσαι.",
+    "image": "images/fire_19.png",
+    "imagePrompt": "Quickly built campfire igniting fast with small dry sticks, outdoor survival, photorealistic"
+  },
+  {
+    "id": 20,
+    "title": "Eco φωτιά χωρίς καπνό",
+    "likes": 0,
+    "description": "Καθαρή και αποδοτική καύση.",
+    "image": "images/fire_20.png",
+    "imagePrompt": "Low-smoke eco-friendly campfire burning efficiently, clean flames, forest campsite, photorealistic"
+  }
+]
