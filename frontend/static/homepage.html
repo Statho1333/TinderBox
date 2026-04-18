@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="utf-8">
+    <title>TinderBox - Home Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="homepage.html">
+                <img src="../images/logo.png" alt="TinderBox Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="homepage.html" class="active">Home</a>
+            <a href="items.html">Our Suggestions</a>
+            <a href="#team">Ομάδα</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="hero-eyebrow">Spark Your adventures</p>
+            <h1 class="hero-title">Tinder<span class="accent">Box</span></h1>
+            <p class="hero-tagline">Fire &amp; Camping alternatives</p>
+            <p class="hero-sub">Experiences and stories for all kind of nature lovers.</p>
+            <div class="hero-btns">
+                <a href="items.html" class="btn-primary">Discover the Experiences</a>
+                <a href="#features" class="btn-secondary">Learn more</a>
+            </div>
+            <div class="hero-scroll">
+                Scroll down
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <section class="slideshow-section" id="slideshow">
+            <p class="section-label">Experiences</p>
+            <h2 class="section-title">Moments next to the fire<div class="divider"></div></h2>
+            
+            <div class="slideshow">
+                <div class="slides" id="slides">
+                    <div class="slide">
+                        <img src="https://picsum.photos/1200/500?random=1" alt="Add image">
+                        <div class="slide-caption"><h3>Add caption</h3><p>Add caption</p></div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/1200/500?random=2" alt="Add image">
+                        <div class="slide-caption"><h3>Add caption</h3><p>Add caption</p></div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/1200/500?random=3" alt="Add image">
+                        <div class="slide-caption"><h3>Add caption</h3><p>Add caption</p></div>
+                    </div>
+                </div>
+                <button class="slide-btn prev" onclick="changeSlide(-1)">&#8592;</button>
+                <button class="slide-btn next" onclick="changeSlide(1)">&#8594;</button>
+            </div>
+            <div class="slide-dots" id="dots"></div>
+        </section>
+
+        <section class="team-section" id="team">
+            <p class="section-label">✦ Meet the team ✦</p>
+            <h2 class="section-title">The people behind the flame<div class="divider"></div></h2>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">🎨</div>
+                    <p class="team-name">Γεώργιος Τσιτλακίδης</p>
+                    <p class="team-role">Front end Developer</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">🧭</div>
+                    <p class="team-name">Γρηγόριος Λιάτσος</p>
+                    <p class="team-role">Product Manager</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">🧑‍💻</div>
+                    <p class="team-name">Ιωάννης Σταθόπουλος</p>
+                    <p class="team-role">Back End Developer</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">💾</div>
+                    <p class="team-name">Κωνσταντίνος Μπουρδούβαλης</p>
+                    <p class="team-role">Database Specialist</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="../images/logo.png" alt="TinderBox"/>
+        </div>
+        <p class="footer-team">
+            Γεώργιος Τσιτλακίδης &nbsp;·&nbsp; Γρηγόριος Λιάτσος<br/>
+            Ιωάννης Σταθόπουλος &nbsp;·&nbsp; Κωνσταντίνος Μπουρδούβαλης
+        </p>
+        <p class="footer-copy">© 2026 TinderBox — Spark Your Adventure</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        function changeSlide(direction) {
+            const slides = document.getElementById('slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+</body>
+</html>
