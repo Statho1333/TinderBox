@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>TinderBox - Home Page</title>
+        <title>TinderBox - Adventures </title>
          <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
@@ -10,18 +10,48 @@
             <div class="logo">
                 <img src="../images/logo.png" alt="TinderBox Logo">
             </div>
-            <nav>
-                <ul class="main-nav">
-                    <li><a href="homepage.html" class="active">Home</a></li>
-                    <li><a href="items.html">Our Suggestions</a></li>
-                </ul>
-            </nav>
-            <footer>
-                <p>Ομάδα:</p>
-                <p>Γεώργιος Τσιτλακίδης</p>
-                <p>Γρηγόριο Λιάτσος</p>
-                <p>Ιωάννης Σταθόπουλος</p>
-                <p>Κωνσταντίνος Μπουρδούβαλης</p>
-            </footer>
+            <header>
+        <div class="logo">
+            <a href="homepage.html">
+                <img src="../images/logo.png" alt="TinderBox Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="homepage.html" class="active">Home</a>
+            <a href="items.html">Adventures</a>
+            <a href="#team">About us</a>
+        </nav>
+    </header>
+
+    <div class="search-bar-wrapper">
+        <div class="search-inner">
+            <div class="search-row">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchBar" class="search-input"
+                </div>
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="results-bar">
+        <p class="results-count">Displaying <span id="countVisible">0</span>from <span id="countTotal">0</span>Adventures</p>
+        <div class="view-toggle">
+            <button class="view-btn active" id="gridBtn" onclick="setView('grid')" title="Grid">⊞</button>
+            <button class="view-btn" id="listBtn" onclick="setView('list')" title="List">≡</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="../images/logo.png" alt="TinderBox"/>
+        </div>
+        <p class="footer-team">
+            Georgios Tsitlakidis &nbsp;·&nbsp; Grigorios Liatsos<br/>
+            Ioannis Stathopoulos &nbsp;·&nbsp; Konstantinos Mpourdouvalis
+        </p>
+        <p class="footer-copy">© 2026 TinderBox — Spark Your Adventure</p>
+    </footer>
     </body>
 </html>
