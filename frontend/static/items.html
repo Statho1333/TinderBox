@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TinderBox - Adventures </title>
+         <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <script src="/integration/items.js"></script>
+
+    <body>
+        <header>
+            
+            <div class="logo">
+                <a href="homepage.html">
+                    <img src="../../resources/images/logo.png" alt="TinderBox Logo">
+                </a>
+            </div>
+
+            <nav>
+                <a href="homepage.html" class="active">Home</a>
+                <a href="items.html">Adventures</a>
+                <a href="#team">About us</a>
+            </nav>
+        </header>
+        
+        <div class="search-bar-wrapper">
+            <div class="search-inner">
+                <div class="search-row">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="searchBar" class="search-input">
+                    </div>
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="results-bar">
+            <div class="view-toggle">
+                <button class="view-btn active" id="gridBtn" onclick="setView('grid')" title="Grid">⊞</button>
+                <button class="view-btn" id="listBtn" onclick="setView('list')" title="List">≡</button>
+            </div>
+        </div>
+
+    <section class="results-section">
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th>Likes</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableBody">
+                <!-- Results will be populated here by JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="../images/logo.png" alt="TinderBox Logo">
+        </div>
+        <p class="footer-team">
+            Georgios Tsitlakidis &nbsp;·&nbsp; Grigorios Liatsos<br/>
+            Ioannis Stathopoulos &nbsp;·&nbsp; Konstantinos Mpourdouvalis
+        </p>
+        <p class="footer-copy">© 2026 TinderBox — Spark Your Adventure</p>
+    </footer>
+    </body>
+</html>
