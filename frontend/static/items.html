@@ -3,62 +3,49 @@
     <head>
         <meta charset="utf-8">
         <title>TinderBox - Adventures </title>
-         <link rel="stylesheet" href="/frontend/css/style.css">
+         <link rel="stylesheet" href="../css/style.css">
     </head>
-
-    <script src="/integration/items.js" defer></script>
-
     <body>
         <header>
-            
             <div class="logo">
-                <a href="homepage.html">
-                    <img src="../../resources/images/logo.png" alt="TinderBox Logo">
-                </a>
+                <img src="../images/logo.png" alt="TinderBox Logo">
             </div>
+            <header>
+        <div class="logo">
+            <a href="homepage.html">
+                <img src="../images/logo.png" alt="TinderBox Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="homepage.html" class="active">Home</a>
+            <a href="items.html">Adventures</a>
+            <a href="#team">About us</a>
+        </nav>
+    </header>
 
-            <nav>
-                <a href="/homepage.html">Home</a>
-                <a href="/items.html" class="active">Adventures</a>
-                <a href="/homepage.html#team">About us</a>
-            </nav>
-        </header>
-        
-        <div class="search-bar-wrapper">
-            <div class="search-inner">
-                <div class="search-row">
-                    <div class="search-box">
-                        <span class="search-icon">🔍</span>
-                        <input type="text" id="searchBar" class="search-input">
-                    </div>
-                    <button class="search-btn">Search</button>
+    <div class="search-bar-wrapper">
+        <div class="search-inner">
+            <div class="search-row">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchBar" class="search-input"
                 </div>
+                <button class="search-btn">Search</button>
             </div>
         </div>
-        
+    </div>
 
-<section class="results-section">
-        <table class="results-table">
-            <thead>
-                <tr>
-                    <th>A/A</th>
-                    <th>Name</th>
-                    <th>Image</th>
-                    <th>Description</th>
-                    <th>Likes</th>
-                    <th></th>
-                </tr>
-            </thead>
+    <div class="results-bar">
+        <p class="results-count">Displaying <span id="countVisible">0</span>from <span id="countTotal">0</span>Adventures</p>
+        <div class="view-toggle">
+            <button class="view-btn active" id="gridBtn" onclick="setView('grid')" title="Grid">⊞</button>
+            <button class="view-btn" id="listBtn" onclick="setView('list')" title="List">≡</button>
+        </div>
+    </div>
 
-            <tbody id="tableBody">
-                <!-- Results will be populated here by JavaScript -->
-            </tbody>
-        </table>
-    </section>
-
-    <footer id="footer">
+    <footer>
         <div class="footer-logo">
-            <img src="../images/logo.png" alt="TinderBox Logo">
+            <img src="../images/logo.png" alt="TinderBox"/>
         </div>
         <p class="footer-team">
             Georgios Tsitlakidis &nbsp;·&nbsp; Grigorios Liatsos<br/>

@@ -3,14 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>TinderBox - Home Page</title>
-    <link rel="stylesheet" href="../frontend/css/style.css">
-    <script src="/integration/items.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="homepage.html">
-                <img src="../../resources/images/logo.png" alt="TinderBox Logo">
+                <img src="../images/logo.png" alt="TinderBox Logo">
             </a>
         </div>
         <nav>
@@ -28,7 +27,7 @@
             <p class="hero-sub">Experiences and stories for all kind of nature lovers.</p>
             <div class="hero-btns">
                 <a href="items.html" class="btn-primary">Discover the Experiences</a>
-                <a href="#slideshow" class="btn-secondary">Learn more</a>
+                <a href="#features" class="btn-secondary">Learn more</a>
             </div>
             <div class="hero-scroll">
                 Scroll down
@@ -41,7 +40,7 @@
             <h2 class="section-title">Moments next to the fire<div class="divider"></div></h2>
             
             <div class="slideshow">
-                <div class="slides" id="popularCarousel">
+                <div class="slides" id="slides">
                     <div class="slide">
                         <img src="" alt="Add image">
                         <div class="slide-caption"><h3>Add caption</h3><p>Add caption</p></div>
@@ -74,7 +73,7 @@
                 <div class="team-card">
                     <div class="team-avatar">🧭</div>
                     <p class="team-name">Grigorios Liatsos</p>
-                    <p class="team-role">API Developer</p>
+                    <p class="team-role">To be defined</p>
                 </div>
                 <div class="team-card">
                     <div class="team-avatar">🧑‍💻</div>
@@ -90,9 +89,9 @@
         </section>
     </main>
 
-    <footer id="footer">
+    <footer>
         <div class="footer-logo">
-            <img src="../../resources/images/logo.png" alt="TinderBox Logo">
+            <img src="../images/logo.png" alt="TinderBox"/>
         </div>
         <p class="footer-team">
             Georgios Tsitlakidis &nbsp;·&nbsp; Grigorios Liatsos<br/>
@@ -104,7 +103,7 @@
     <script>
         let currentSlide = 0;
         function changeSlide(direction) {
-            const slides = document.getElementById('popularCarousel');
+            const slides = document.getElementById('slides');
             const totalSlides = document.querySelectorAll('.slide').length;
             currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
             slides.style.transform = `translateX(-${currentSlide * 100}%)`;
