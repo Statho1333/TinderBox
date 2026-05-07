@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 from flask_pymongo import PyMongo
 from bson import ObjectId
 from flask import jsonify
@@ -147,16 +147,34 @@ fireDocuments = [
   }
 ]
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='frontend', static_url_path='/frontend')
 app.config["MONGO_URI"] = "mongodb://localhost:27017/TinderDatabase"
 mongo = PyMongo(app)
 
-if mongo.db.camping.find_one() is None:
-  print("Η βάση είναι άδεια")
-  mongo.db.camping.insert_many(fireDocuments)
-else:
-  print("Η βάση έχει δεδομένα")
+with app.app_context():
+  if mongo.db.camping.find_one() is None:
+    print("Η βάση είναι άδεια")
+    mongo.db.camping.insert_many(fireDocuments)
+  else:
+    print("Η βάση έχει δεδομένα")
 
+
+@app.route('/integration/<path:filename>')
+def integration(filename):
+  return send_from_directory('integration', filename)
+
+@app.route('/resources/<path:filename>')
+def resources(filename):
+  return send_from_directory('resources', filename)
+
+@app.route('/')
+@app.route('/homepage.html')
+def index():
+  return send_from_directory('frontend/static', 'homepage.html')
+
+@app.route('/items.html')
+def index_items():
+  return send_from_directory('frontend/static', 'items.html')
 
 @app.route('/like/<item_id>', methods=['GET', 'POST'])
 def increament_likes(item_id):
@@ -168,8 +186,9 @@ def increament_likes(item_id):
   
   mongo.db.camping.update_one({"_id": ObjectId(item_id)},
                                {"$inc": {"likes":1}})
-  
-  return {"message": "Like added"}
+
+  updated = mongo.db.camping.find_one({"_id": ObjectId(item_id)})
+  return {"likes": updated["likes"]}
 
 @app.route('/popular',methods=['GET'])
 def top_five():
@@ -214,3 +233,7 @@ def search(item_name):
         })
 
     return jsonify(result)
+
+
+if __name__ == '__main__':
+  app.run(debug=True)

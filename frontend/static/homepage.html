@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>TinderBox - Home Page</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../frontend/css/style.css">
+    <script src="/integration/items.js" defer></script>
 </head>
 <body>
     <header>
@@ -27,7 +28,7 @@
             <p class="hero-sub">Experiences and stories for all kind of nature lovers.</p>
             <div class="hero-btns">
                 <a href="items.html" class="btn-primary">Discover the Experiences</a>
-                <a href="#features" class="btn-secondary">Learn more</a>
+                <a href="#slideshow" class="btn-secondary">Learn more</a>
             </div>
             <div class="hero-scroll">
                 Scroll down
@@ -40,7 +41,7 @@
             <h2 class="section-title">Moments next to the fire<div class="divider"></div></h2>
             
             <div class="slideshow">
-                <div class="slides" id="slides">
+                <div class="slides" id="popularCarousel">
                     <div class="slide">
                         <img src="" alt="Add image">
                         <div class="slide-caption"><h3>Add caption</h3><p>Add caption</p></div>
@@ -89,7 +90,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="footer">
         <div class="footer-logo">
             <img src="../../resources/images/logo.png" alt="TinderBox Logo">
         </div>
@@ -103,7 +104,7 @@
     <script>
         let currentSlide = 0;
         function changeSlide(direction) {
-            const slides = document.getElementById('slides');
+            const slides = document.getElementById('popularCarousel');
             const totalSlides = document.querySelectorAll('.slide').length;
             currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
             slides.style.transform = `translateX(-${currentSlide * 100}%)`;

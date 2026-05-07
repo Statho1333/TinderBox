@@ -13,6 +13,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
 html { scroll-behavior: smooth; }
 
@@ -266,3 +267,25 @@ footer { background: #111A0F; border-top: 3px solid var(--forest); padding: 2.5r
 .footer-logo img { height: 52px; opacity: .9; }
 .footer-team { font-family: 'Space Mono', monospace; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); line-height: 2; }
 .footer-copy { margin-top: 1.2rem; font-size: .8rem; color: #4A5A46; }
+
+/* SEARCH BAR */
+.search-bar-wrapper { background: var(--offwhite); border-bottom: 1px solid var(--stone); padding: 2rem; padding-top: calc(72px + 2rem); }
+.search-inner { max-width: 960px; margin: 0 auto; }
+.search-row { display: flex; gap: 1rem; align-items: center; }
+.search-box { display: flex; align-items: center; flex: 1; background: var(--white); border: 1px solid var(--stone); border-radius: 6px; padding: 0 1rem; gap: .6rem; }
+.search-icon { color: var(--muted); font-size: 1rem; }
+.search-input { flex: 1; border: none; outline: none; padding: .75rem 0; font-size: 1rem; background: transparent; color: var(--text); }
+.search-btn { background: var(--forest); color: var(--white); border: none; border-radius: 6px; padding: .75rem 1.6rem; font-size: .95rem; cursor: pointer; transition: background .2s; }
+.search-btn:hover { background: var(--forest-l); }
+
+/* RESULTS */
+.results-bar { max-width: 960px; margin: 1.5rem auto 0; padding: 0 2rem; display: flex; justify-content: flex-end; }
+.view-toggle { display: flex; gap: .4rem; }
+.view-btn { background: var(--white); border: 1px solid var(--stone); border-radius: 4px; padding: .4rem .7rem; cursor: pointer; font-size: 1rem; transition: background .2s, border-color .2s; }
+.view-btn.active, .view-btn:hover { background: var(--forest); color: var(--white); border-color: var(--forest); }
+
+.results-section { max-width: 960px; margin: 1.5rem auto 4rem; padding: 0 2rem; min-height: 60vh; }
+.results-table { width: 100%; border-collapse: collapse; }
+.results-table th, .results-table td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid var(--stone); font-size: .95rem; }
+.results-table th { background: var(--forest); color: var(--white); font-family: 'Space Mono', monospace; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+.results-table tr:hover td { background: var(--offwhite); }
