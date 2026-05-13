@@ -95,19 +95,10 @@
         </div>
         <p class="footer-team">
             Georgios Tsitlakidis &nbsp;·&nbsp; Grigorios Liatsos<br/>
-            Ioannis Stathopoulos &nbsp;·&nbsp; Konstantinos Mpourdouvalis
+            Ioannis Stathopoulos &nbsp;·&nbsp; Konstantinos Bourdouvalis
         </p>
         <p class="footer-copy">© 2026 TinderBox — Spark Your Adventure</p>
     </footer>
 
-    <script>
-        let currentSlide = 0;
-        function changeSlide(direction) {
-            const slides = document.getElementById('slides');
-            const totalSlides = document.querySelectorAll('.slide').length;
-            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-    </script>
 </body>
 </html>
