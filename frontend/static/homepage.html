@@ -72,19 +72,19 @@
                     <p class="team-role">Front end Developer</p>
                 </div>
                 <div class="team-card">
-                    <div class="team-avatar">🧭</div>
-                    <p class="team-name">Grigorios Liatsos</p>
-                    <p class="team-role">API Developer</p>
-                </div>
-                <div class="team-card">
                     <div class="team-avatar">🧑‍💻</div>
                     <p class="team-name">Ioannis Stathopoulos</p>
                     <p class="team-role">Back End Developer</p>
                 </div>
                 <div class="team-card">
                     <div class="team-avatar">💾</div>
-                    <p class="team-name">Konstantinos Mpourdouvalis</p>
+                    <p class="team-name">Konstantinos Bourdouvalis</p>
                     <p class="team-role">Database Specialist</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">🧭</div>
+                        <p class="team-name">Grigorios Liatsos</p>
+                        <p class="team-role">Project Manager</p>
                 </div>
             </div>
         </section>
@@ -96,19 +96,11 @@
         </div>
         <p class="footer-team">
             Georgios Tsitlakidis &nbsp;·&nbsp; Grigorios Liatsos<br/>
-            Ioannis Stathopoulos &nbsp;·&nbsp; Konstantinos Mpourdouvalis
+            Ioannis Stathopoulos &nbsp;·&nbsp; Konstantinos Bourdouvalis
         </p>
         <p class="footer-copy">© 2026 TinderBox — Spark Your Adventure</p>
     </footer>
 
-    <script>
-        let currentSlide = 0;
-        function changeSlide(direction) {
-            const slides = document.getElementById('popularCarousel');
-            const totalSlides = document.querySelectorAll('.slide').length;
-            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-    </script>
+
 </body>
 </html>
