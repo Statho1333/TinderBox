@@ -4,13 +4,21 @@ const url = "http://127.0.0.1:5000/";
 const searchBar = document.getElementById('searchBar');
 const tableBody = document.getElementById('tableBody');
 
-if (searchBar) searchBar.addEventListener('keydown', async function(event) {
-    if (event.code === 'Enter'){
-        let searchText = searchBar.value;
-        const results = await getSearchResults(searchText);
-        serveSearchResults(results);
-    }
-})
+const searchButton = document.getElementById('search-btn'); // άλλαξε το id με το σωστό
+
+async function handleSearch() {
+    let searchText = searchBar.value;
+    const results = await getSearchResults(searchText);
+    serveSearchResults(results);
+}
+
+if (searchBar) {
+    searchBar.addEventListener('keydown', function(event) {
+        if (event.code === 'Enter') handleSearch();
+    });
+}
+
+if (searchButton) searchButton.addEventListener('click', handleSearch);
 
 //Fuction to get search results from backend
 async function getSearchResults(searchText){

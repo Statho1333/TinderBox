@@ -210,16 +210,18 @@ def top_five():
     #Νote: χρειάζεται η jsonify() ???
   return jsonify(result)
 
-
+@app.route('/search/', defaults={'item_name': ''}, methods=['GET'])
 @app.route('/search/<string:item_name>',methods=['GET'])
 def search(item_name):
-    items = list(mongo.db.camping.find({
-        "title": {"$regex": item_name, "$options": "i"}}))
-
-    if len(items) == 0:
-        print(f"Δεν βρέθηκε τίποτα με το όνομα {item_name}")
-
+    if item_name == '':
         items = list(mongo.db.camping.find())
+    else:
+        items = list(mongo.db.camping.find({
+            "title": {"$regex": item_name, "$options": "i"}}))
+        
+        if len(items) == 0:
+            print(f"Δεν βρέθηκε τίποτα με το όνομα {item_name}")
+            items = list(mongo.db.camping.find())
 
     result = []
 
