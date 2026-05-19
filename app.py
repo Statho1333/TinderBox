@@ -149,6 +149,7 @@ fireDocuments = [
 
 app = Flask(__name__, static_folder='frontend', static_url_path='/frontend')
 app.config["MONGO_URI"] = "mongodb://localhost:27017/TinderDatabase"
+
 mongo = PyMongo(app)
 
 with app.app_context():
