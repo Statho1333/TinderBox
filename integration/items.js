@@ -36,6 +36,14 @@ async function serveSearchResults(results){
     }
     else{
         tableBody.innerHTML = "";
+
+        if (results.length === 0){
+            const emptyRow = document.createElement('tr');
+            emptyRow.innerHTML = `<td colspan="6" style="text-align:center; padding:20px;">Δεν υπάρχουν αντικείμενα με αυτά τα κριτήρια αναζήτησης που επιλέξατε</td>`;
+            tableBody.appendChild(emptyRow);
+            return;
+        }
+
         results.forEach((result, index) => {
             const row = document.createElement('tr');
             const attNum = document.createElement('td');
@@ -76,13 +84,13 @@ if (tableBody) tableBody.addEventListener('click', async function(event){
     if (!imgClicked && !btnClicked) return;
 
     const tinderImgId = (imgClicked || btnClicked).getAttribute('data-id');
-    const likes = await incrementLikes(tinderImgId);
-    
-    if (likes!== null){
-        const row = (imgClicked || btnClicked).closest('tr');
-        row.children[4].textContent = likes;
+    const success = await incrementLikes(tinderImgId);
 
-        await loadPopular(); // Refresh the popular carousel if needed
+    if (success){
+        const row = (imgClicked || btnClicked).closest('tr');
+        row.children[4].textContent = parseInt(row.children[4].textContent) + 1;
+
+        await loadPopular();
     }
 });
 
@@ -92,16 +100,11 @@ async function incrementLikes(tinderImgId){
             method: 'POST'
         });
 
-        if (!response.ok){
-            throw new Error(`Response status: ${response.status}`);
-        }
-
-        const result = await response.json();
-        return result.likes;
+        return response.ok;
 
     } catch (error) {
         console.error(error.message);
-        return null;
+        return false;
     }
 };
 
@@ -169,7 +172,13 @@ async function loadHomepageSlides() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', loadHomepageSlides);
+document.addEventListener('DOMContentLoaded', async function() {
+    loadHomepageSlides();
+    if (tableBody) {
+        const results = await getSearchResults('');
+        serveSearchResults(results);
+    }
+});
 
 let currentSlide = 0;
 

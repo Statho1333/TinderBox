@@ -176,19 +176,22 @@ def index():
 def index_items():
   return send_from_directory('frontend/static', 'items.html')
 
+#Note: to GET μπορεί να βγεί !
 @app.route('/like/<item_id>', methods=['GET', 'POST'])
 def increament_likes(item_id):
-  item = mongo.db.camping.find_one({"_id": ObjectId(item_id)})
-  if item is None:
-    return {"message":f'To αντικείμενο {item_id} δεν βρέθηκε'}, 404
-  else:
-    print("Το αντικείμενο βρέθηκε")
+  #Νote: Debugging code.... 
+  #item = mongo.db.camping.find_one({"_id": ObjectId(item_id)})
+  #if item is None:
+  #  return {"message":f'To αντικείμενο {item_id} δεν βρέθηκε'}, 404
+  #else:
+  #  print("Το αντικείμενο βρέθηκε")
   
   mongo.db.camping.update_one({"_id": ObjectId(item_id)},
                                {"$inc": {"likes":1}})
 
-  updated = mongo.db.camping.find_one({"_id": ObjectId(item_id)})
-  return {"likes": updated["likes"]}
+  #updated = mongo.db.camping.find_one({"_id": ObjectId(item_id)})
+  #return {"likes": updated["likes"]}
+  return ('', 204)
 
 @app.route('/popular',methods=['GET'])
 def top_five():
@@ -209,16 +212,20 @@ def top_five():
     #Νote: χρειάζεται η jsonify() ???
   return jsonify(result)
 
-
+@app.route('/search/', defaults={'item_name': ''}, methods=['GET'])
 @app.route('/search/<string:item_name>',methods=['GET'])
 def search(item_name):
-    items = list(mongo.db.camping.find({
-        "title": {"$regex": item_name, "$options": "i"}}))
-
-    if len(items) == 0:
-        print(f"Δεν βρέθηκε τίποτα με το όνομα {item_name}")
-
+    if item_name == '':
         items = list(mongo.db.camping.find())
+    else:
+        items = list(mongo.db.camping.find({
+            "title": {"$regex": item_name, "$options": "i"}}))
+        
+        if len(items) == 0:
+            print(f"Δεν βρέθηκε τίποτα με το όνομα {item_name}")
+            #Note: η αλλαγή 
+            #items = list(mongo.db.camping.find())
+            items = []
 
     result = []
 
